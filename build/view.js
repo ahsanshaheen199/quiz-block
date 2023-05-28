@@ -31,13 +31,28 @@ const FrontendAnswerOption = _ref => {
     value: answerOption.answer.split(' ').join('_').toLowerCase(),
     onChange: e => {
       onChange(answerOption);
-    }
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
-    style: {
-      cursor: 'pointer'
     },
-    htmlFor: `answer_text-${id}`
-  }, answerOption.answer));
+    className: "peer hidden"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    htmlFor: `answer_text-${id}`,
+    className: "flex justify-between w-full text-base cursor-pointer p-4 border border-gray-200 rounded peer-checked:text-white peer-checked:bg-blue-500 peer-checked:border-blue-600 hover:text-gray-600 hover:bg-gray-100"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, answerOption.answer), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+    viewBox: "0 0 24 24",
+    fill: "none",
+    className: "h-6 w-6 hidden peer-checked:block"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("circle", {
+    cx: 12,
+    cy: 12,
+    r: 12,
+    fill: "#fff",
+    opacity: "0.2"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    d: "M7 13l3 3 7-7",
+    stroke: "#fff",
+    strokeWidth: 1.5,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FrontendAnswerOption);
 
@@ -179,8 +194,21 @@ const App = props => {
       setIsCorrectAnswer(false);
     }
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, props.question), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "answer-list"
+  if (isCorrectAnswer !== undefined) {
+    return isCorrectAnswer ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "flex h-28 rounded border border-green-500 items-center justify-center text-white bg-green-500"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      className: "text-base"
+    }, "Answer is correct")) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "flex h-28 rounded border border-red-500 items-center justify-center text-white bg-red-500"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      className: "text-base"
+    }, "Answer is incorrect"));
+  }
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+    className: "text-2xl mb-5"
+  }, props.question), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "answer-list space-y-2"
   }, props.answers.map((answer, index) => {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_FrontendAnswerOption__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: index,
@@ -190,17 +218,10 @@ const App = props => {
       }
     });
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "submit-answer-button-wrapper"
+    className: "mt-5"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    style: {
-      padding: '.75rem 1rem',
-      color: 'white',
-      backgroundColor: '#007cba',
-      border: 'none',
-      borderRadius: '4px',
-      cursor: 'pointer'
-    },
-    onClick: submitAnswer
+    onClick: submitAnswer,
+    className: "cursor-pointer rounded border-none text-white py-3 px-4 text-base bg-green-700"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Submit Answer', 'quiz-block'))));
 };
 })();

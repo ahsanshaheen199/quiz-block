@@ -5,78 +5,77 @@
  */
 
 .wp-block-create-block-quiz-block {
-	border: 1px dotted black;
-	border-radius: 4px;
-}
 
-.wp-block-create-block-quiz-block {
+	@apply rounded border border-gray-200;
 
 	.select-wrapper {
-		margin-bottom: 20px;
+
+		@apply mb-5;
 	}
 
 	.answer-heading {
-		display: flex;
-		padding: 20px;
-		background-color: gray;
-		color: white;
-		justify-content: space-between;
+
+		@apply flex p-5 text-white justify-between bg-gray-600;
 
 		.answer-text {
-			flex-basis: 80%;
+
+			@apply basis-[80%];
 		}
 
 		.answer-correction {
-			flex-basis: 10%;
+
+			@apply basis-[10%];
 		}
 
 		.answer-deletion {
-			flex-basis: 10%;
+
+			@apply basis-[10%];
 		}
 	}
 
 	.answer-list {
-		border: 1px solid #737373;
+
+		@apply border border-gray-600;
 
 		.answer-option {
-			display: flex;
-			align-items: center;
-			padding: 16px;
-			border-bottom: 1px solid #737373;
+
+			@apply flex items-center p-4 border-b border-gray-600;
 
 			&:last-child {
-				border-bottom: 0;
+
+				@apply border-b-0;
 			}
 
 			input[type="text"] {
-				display: block;
-				width: 100%;
-				border: none;
-				font-size: 16px;
-				padding-left: 0 !important;
+
+				@apply block w-full border-none text-base pl-0 #{!important};
 
 				&:focus {
-					box-shadow: none !important;
+
+					@apply shadow-none #{!important};
 				}
 			}
-	
+
 			.answer-text {
-				flex-basis: 80%;
+
+				@apply basis-[80%];
 			}
-	
+
 			.answer-correction {
-				flex-basis: 10%;
+
+				@apply basis-[10%];
 			}
 
 			.answer-deletion {
-				flex-basis: 10%;
-				text-align: right;
+
+				@apply text-right basis-[10%];
 			}
 		}
 	}
 
 	.add-answer-button-wrapper {
-		margin-top: 20px;
+
+		@apply mt-5;
 	}
 
 }

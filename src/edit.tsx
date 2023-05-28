@@ -73,10 +73,14 @@ export default function Edit( {
 
 			<div className="answer-heading">
 				<div className="answer-text">
-					<span>{ __( 'Answers', 'quiz-block' ) }</span>
+					<span className="text-base">
+						{ __( 'Answers', 'quiz-block' ) }
+					</span>
 				</div>
 				<div className="answer-correction">
-					<span>{ __( 'Correct Answer', 'quiz-block' ) }</span>
+					<span className="text-base">
+						{ __( 'Correction', 'quiz-block' ) }
+					</span>
 				</div>
 				<div className="answer-deletion"></div>
 			</div>

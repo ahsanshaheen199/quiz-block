@@ -7,63 +7,74 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-quiz-block {
-  border: 1px dotted black;
-  border-radius: 4px;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity))
 }
 
 .wp-block-create-block-quiz-block .select-wrapper {
-  margin-bottom: 20px;
+    margin-bottom: 1.25rem
 }
 .wp-block-create-block-quiz-block .answer-heading {
-  display: flex;
-  padding: 20px;
-  background-color: gray;
-  color: white;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    --tw-bg-opacity: 1;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+    padding: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 .wp-block-create-block-quiz-block .answer-heading .answer-text {
-  flex-basis: 80%;
+    flex-basis: 80%
 }
 .wp-block-create-block-quiz-block .answer-heading .answer-correction {
-  flex-basis: 10%;
+    flex-basis: 10%
 }
 .wp-block-create-block-quiz-block .answer-heading .answer-deletion {
-  flex-basis: 10%;
+    flex-basis: 10%
 }
 .wp-block-create-block-quiz-block .answer-list {
-  border: 1px solid #737373;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity))
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option {
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  border-bottom: 1px solid #737373;
+    display: flex;
+    align-items: center;
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    padding: 1rem
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option:last-child {
-  border-bottom: 0;
+    border-bottom-width: 0px
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option input[type=text] {
-  display: block;
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  padding-left: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    border-style: none !important;
+    padding-left: 0px !important;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option input[type=text]:focus {
-  box-shadow: none !important;
+    --tw-shadow: 0 0 #0000 !important;
+    --tw-shadow-colored: 0 0 #0000 !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option .answer-text {
-  flex-basis: 80%;
+    flex-basis: 80%
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option .answer-correction {
-  flex-basis: 10%;
+    flex-basis: 10%
 }
 .wp-block-create-block-quiz-block .answer-list .answer-option .answer-deletion {
-  flex-basis: 10%;
-  text-align: right;
+    flex-basis: 10%;
+    text-align: right
 }
 .wp-block-create-block-quiz-block .add-answer-button-wrapper {
-  margin-top: 20px;
+    margin-top: 1.25rem
 }
 
 /*# sourceMappingURL=index.css.map*/

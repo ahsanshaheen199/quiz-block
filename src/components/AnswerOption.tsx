@@ -1,5 +1,6 @@
 import { Button } from '@wordpress/components';
 import { QuizBlockProps } from '../types';
+import { useId } from '@wordpress/element';
 
 type Props = {
 	answerOption: {
@@ -19,6 +20,8 @@ const AnswerOption = ( {
 	setAttributes,
 	number,
 }: Props ) => {
+	const id = useId();
+
 	return (
 		<div className="answer-option">
 			<div className="answer-text">
@@ -45,7 +48,7 @@ const AnswerOption = ( {
 			<div className="answer-correction">
 				<input
 					type="radio"
-					name="question_answer"
+					name={ `question_answer_${ id }` }
 					value={ answerOption.answer.toLowerCase() }
 					checked={ answerOption.isCorrect === true }
 					onChange={ ( e ) => {

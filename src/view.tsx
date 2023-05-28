@@ -32,10 +32,22 @@ const App = ( props: QuizBlockProps ) => {
 		}
 	};
 
+	if ( isCorrectAnswer !== undefined ) {
+		return isCorrectAnswer ? (
+			<div className="flex h-28 rounded border border-green-500 items-center justify-center text-white bg-green-500">
+				<p className="text-base">Answer is correct</p>
+			</div>
+		) : (
+			<div className="flex h-28 rounded border border-red-500 items-center justify-center text-white bg-red-500">
+				<p className="text-base">Answer is incorrect</p>
+			</div>
+		);
+	}
+
 	return (
 		<div>
-			<h3>{ props.question }</h3>
-			<div className="answer-list">
+			<h3 className="text-2xl mb-5">{ props.question }</h3>
+			<div className="answer-list space-y-2">
 				{ props.answers.map( ( answer, index ) => {
 					return (
 						<FrontendAnswerOption
@@ -49,17 +61,10 @@ const App = ( props: QuizBlockProps ) => {
 				} ) }
 			</div>
 
-			<div className="submit-answer-button-wrapper">
+			<div className="mt-5">
 				<button
-					style={ {
-						padding: '.75rem 1rem',
-						color: 'white',
-						backgroundColor: '#007cba',
-						border: 'none',
-						borderRadius: '4px',
-						cursor: 'pointer',
-					} }
 					onClick={ submitAnswer }
+					className="cursor-pointer rounded border-none text-white py-3 px-4 text-base bg-green-700"
 				>
 					{ __( 'Submit Answer', 'quiz-block' ) }
 				</button>
