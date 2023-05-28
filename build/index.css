@@ -11,4 +11,59 @@
   border-radius: 4px;
 }
 
+.wp-block-create-block-quiz-block .select-wrapper {
+  margin-bottom: 20px;
+}
+.wp-block-create-block-quiz-block .answer-heading {
+  display: flex;
+  padding: 20px;
+  background-color: gray;
+  color: white;
+  justify-content: space-between;
+}
+.wp-block-create-block-quiz-block .answer-heading .answer-text {
+  flex-basis: 80%;
+}
+.wp-block-create-block-quiz-block .answer-heading .answer-correction {
+  flex-basis: 10%;
+}
+.wp-block-create-block-quiz-block .answer-heading .answer-deletion {
+  flex-basis: 10%;
+}
+.wp-block-create-block-quiz-block .answer-list {
+  border: 1px solid #737373;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #737373;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option:last-child {
+  border-bottom: 0;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option input[type=text] {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding-left: 0 !important;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option input[type=text]:focus {
+  box-shadow: none !important;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option .answer-text {
+  flex-basis: 80%;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option .answer-correction {
+  flex-basis: 10%;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-option .answer-deletion {
+  flex-basis: 10%;
+  text-align: right;
+}
+.wp-block-create-block-quiz-block .add-answer-button-wrapper {
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=index.css.map*/

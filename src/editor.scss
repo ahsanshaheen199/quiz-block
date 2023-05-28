@@ -8,3 +8,75 @@
 	border: 1px dotted black;
 	border-radius: 4px;
 }
+
+.wp-block-create-block-quiz-block {
+
+	.select-wrapper {
+		margin-bottom: 20px;
+	}
+
+	.answer-heading {
+		display: flex;
+		padding: 20px;
+		background-color: gray;
+		color: white;
+		justify-content: space-between;
+
+		.answer-text {
+			flex-basis: 80%;
+		}
+
+		.answer-correction {
+			flex-basis: 10%;
+		}
+
+		.answer-deletion {
+			flex-basis: 10%;
+		}
+	}
+
+	.answer-list {
+		border: 1px solid #737373;
+
+		.answer-option {
+			display: flex;
+			align-items: center;
+			padding: 16px;
+			border-bottom: 1px solid #737373;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			input[type="text"] {
+				display: block;
+				width: 100%;
+				border: none;
+				font-size: 16px;
+				padding-left: 0 !important;
+
+				&:focus {
+					box-shadow: none !important;
+				}
+			}
+	
+			.answer-text {
+				flex-basis: 80%;
+			}
+	
+			.answer-correction {
+				flex-basis: 10%;
+			}
+
+			.answer-deletion {
+				flex-basis: 10%;
+				text-align: right;
+			}
+		}
+	}
+
+	.add-answer-button-wrapper {
+		margin-top: 20px;
+	}
+
+}

@@ -14,14 +14,28 @@
     "quizTitle": {
       "type": "string"
     },
+    "questionType": {
+      "type": "string",
+      "default": "1"
+    },
     "answers": {
       "type": "array",
-      "default": []
+      "default": [
+        {
+          "answer": "True",
+          "isCorrect": true
+        },
+        {
+          "answer": "False",
+          "isCorrect": false
+        }
+      ]
     }
   },
   "textdomain": "quiz-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "render": "file:./render.php"
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
 }

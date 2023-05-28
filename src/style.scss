@@ -8,4 +8,19 @@
 .wp-block-create-block-quiz-block {
 	color: black;
 	padding: 10px;
+
+	.answer-list {
+
+		.answer-text {
+			display: flex;
+
+			input[type="radio"] {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.submit-answer-button-wrapper {
+		margin-top: 20px;
+	}
 }

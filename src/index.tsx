@@ -30,12 +30,25 @@ registerBlockType( metadata.name, {
 	category: metadata.category,
 	attributes: {
 		question: {
-			type: 'string'
+			type: 'string',
 		},
 		answers: {
 			type: 'array',
-			default: []
-		}
+			default: [
+				{
+					answer: 'First Option',
+					isCorrect: true,
+				},
+				{
+					answer: 'Second Option',
+					isCorrect: false,
+				},
+			],
+		},
+		questionType: {
+			type: 'string',
+			default: '1',
+		},
 	},
 	/**
 	 * @see ./edit.js

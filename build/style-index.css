@@ -11,5 +11,14 @@
   color: black;
   padding: 10px;
 }
+.wp-block-create-block-quiz-block .answer-list .answer-text {
+  display: flex;
+}
+.wp-block-create-block-quiz-block .answer-list .answer-text input[type=radio] {
+  margin-right: 5px;
+}
+.wp-block-create-block-quiz-block .submit-answer-button-wrapper {
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=style-index.css.map*/
