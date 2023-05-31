@@ -35,11 +35,11 @@ const App = ( props: QuizBlockProps ) => {
 	if ( isCorrectAnswer !== undefined ) {
 		return isCorrectAnswer ? (
 			<div className="flex h-28 rounded border border-green-500 items-center justify-center text-white bg-green-500">
-				<p className="text-base">Answer is correct</p>
+				<p className="text-base">{ __( 'Answer is correct', 'quiz-block' ) }</p>
 			</div>
 		) : (
 			<div className="flex h-28 rounded border border-red-500 items-center justify-center text-white bg-red-500">
-				<p className="text-base">Answer is incorrect</p>
+				<p className="text-base">{ __( 'Answer is incorrect', 'quiz-block' ) }</p>
 			</div>
 		);
 	}
